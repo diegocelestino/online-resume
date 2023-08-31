@@ -1,28 +1,29 @@
-.experience {
+.education {
   display: flex;
   margin: 120px auto;
 }
 
-.experience .items {
+.education .items {
   margin: auto;
   display: inline-flex;
   align-items: flex-end;
   gap: 100px;
 }
 
-.experience .image {
+.education .image {
+  position: relative;
   width: 360px;
   height: 360px;
   border-radius: 180px;
 }
 
-.experience .texts {
+.education .texts {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.experience .tittle {
+.education .tittle {
   font-family: "Inria Sans-Regular", Helvetica;
   color: #ffffff;
   font-size: 32px;
@@ -30,7 +31,15 @@
   margin: 0px;
 }
 
-.experience .subtittle {
+.education .period {
+  font-family: "Inria Sans-Regular", Helvetica;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+
+}
+
+.education .subtittle {
   font-family: "Inria Sans-Regular", Helvetica;
   color: #ffffff;
   font-size: 28px;
@@ -39,7 +48,7 @@
 
 }
 
-.experience .text {
+.education .text {
   width: 635px;
   height: 173px;
   font-family: "Inria Sans-Regular", Helvetica;
@@ -49,4 +58,3 @@
   letter-spacing: 0;
   line-height: normal;
 }
-

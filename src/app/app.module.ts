@@ -11,6 +11,8 @@ import {AboutmeComponent} from "./components/home/aboutme/aboutme.component";
 import {SkillsComponent} from "./components/home/skills/skills.component";
 import {Expression} from "@angular/compiler";
 import {ExperienceComponent} from "./components/home/experience/experience.component";
+import {EducationComponent} from "./components/home/education/education.component";
+import {CertificationsComponent} from "./components/home/certifications/certifications.component";
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {ExperienceComponent} from "./components/home/experience/experience.compo
     DropdownComponent,
     AboutmeComponent,
     SkillsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    EducationComponent,
+    CertificationsComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { EducationComponent } from './education/education.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ExperienceComponent } from './experience/experience.component';
     DropdownComponent,
     AboutmeComponent,
     SkillsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    EducationComponent,
+    CertificationsComponent
   ],
   imports: [
     CommonModule

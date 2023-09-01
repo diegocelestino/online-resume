@@ -13,6 +13,7 @@ import {Expression} from "@angular/compiler";
 import {ExperienceComponent} from "./components/home/experience/experience.component";
 import {EducationComponent} from "./components/home/education/education.component";
 import {CertificationsComponent} from "./components/home/certifications/certifications.component";
+import {ContactComponent} from "./components/home/contact/contact.component";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {CertificationsComponent} from "./components/home/certifications/certific
     SkillsComponent,
     ExperienceComponent,
     EducationComponent,
-    CertificationsComponent
+    CertificationsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

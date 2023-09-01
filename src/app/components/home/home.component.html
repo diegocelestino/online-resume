@@ -1,12 +1,21 @@
 
   <app-banner></app-banner>
-  <app-dropdown></app-dropdown>
-  <app-aboutme></app-aboutme>
-  <app-dropdown></app-dropdown>
-  <app-skills></app-skills>
-  <app-dropdown></app-dropdown>
-  <app-experience></app-experience>
-  <app-dropdown></app-dropdown>
-  <app-education></app-education>
-  <app-dropdown></app-dropdown>
+  <app-dropdown title="About me" (click)="showSectionAboutMe()"></app-dropdown>
+  <app-aboutme *ngIf="showAboutMe"></app-aboutme>
+
+  <app-dropdown title="Skills" (click)="showSectionSkills()"></app-dropdown>
+  <app-skills *ngIf="showSkills"></app-skills>
+
+  <app-dropdown title="Experience" (click)="showSectionExperience()"></app-dropdown>
+  <app-experience *ngIf="showExperience"></app-experience>
+
+  <app-dropdown title="Education" (click)="showSectionEducation()"></app-dropdown>
+  <app-education *ngIf="showEducation"></app-education>
+
+  <app-dropdown title="Certifications" (click)="showSectionCertifications()"></app-dropdown>
+  <app-certifications *ngIf="showCertifications"></app-certifications>
+
+  <app-dropdown title="Contact" (click)="showSectionContact()"></app-dropdown>
+  <app-contact *ngIf="showContact"></app-contact>
+
 

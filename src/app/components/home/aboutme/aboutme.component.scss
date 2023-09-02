@@ -3,32 +3,6 @@
   margin: auto;
 }
 
-.hidden {
-  display: none;
-}
-
-.box {
-  transition: all 1s linear;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.visuallyhidden {
-  //opacity: 0;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: 1s;
-}
-
-.show{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transition-delay: 1s;
-  transition: 3s;
-  display: flex;
-}
-.hide{
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: 3s;
-}
-
 .aboutme .items {
   margin: auto;
   display: flex;
@@ -43,7 +17,6 @@
 }
 
 .aboutme .text_container {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
@@ -69,4 +42,32 @@
   line-height: normal;
   width: 635px;
   height: 337px;
+}
+
+.dropdown {
+  display: flex;
+  margin: 40px auto;
+  margin-left: 80px;
+  background: black;
+}
+
+.dropdown .down {
+  top: 13px;
+  left: 44px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in;
+}
+
+.dropdown .text-dropdown {
+  width: 334px;
+  top: 19px;
+  left: 113px;
+  font-family: "Inria Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
 }

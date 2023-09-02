@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HomeService} from "../home.service";
-import {elementAt} from "rxjs";
 
 
 @Component({
@@ -19,18 +18,11 @@ export class DropdownComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    var arrow = document.getElementById('arrow');
-    arrow!.classList.add(this.dropdownClass!.toString());
-    console.log(arrow!.classList)
   }
 
-  updateState(){
-    this.homeService.setState(!this.state);
-  }
 
   showSection() {
     this.rotateArrow();
-    this.updateState();
   };
 
   rotateArrow(){

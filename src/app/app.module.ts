@@ -9,11 +9,11 @@ import {BannerComponent} from "./components/home/banner/banner.component";
 import {DropdownComponent} from "./components/home/dropdown/dropdown.component";
 import {AboutmeComponent} from "./components/home/aboutme/aboutme.component";
 import {SkillsComponent} from "./components/home/skills/skills.component";
-import {Expression} from "@angular/compiler";
 import {ExperienceComponent} from "./components/home/experience/experience.component";
 import {EducationComponent} from "./components/home/education/education.component";
 import {CertificationsComponent} from "./components/home/certifications/certifications.component";
 import {ContactComponent} from "./components/home/contact/contact.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -31,6 +31,7 @@ import {ContactComponent} from "./components/home/contact/contact.component";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgOptimizedImage
   ],

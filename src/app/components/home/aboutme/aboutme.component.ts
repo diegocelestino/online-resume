@@ -1,45 +1,38 @@
 import { Component, OnInit} from '@angular/core';
+import {trigger, transition,animate, style, state} from '@angular/animations';
 import {HomeService} from "../home.service";
-
 @Component({
   selector: 'app-aboutme',
   templateUrl: './aboutme.component.html',
-  styleUrls: ['./aboutme.component.scss']
+  styleUrls: ['./aboutme.component.scss'],
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        opacity: 1,
+        height: '700px'
+      })),
+      state('closed', style({
+        height: '0px',
+        opacity: -1,
+      })),
+      transition('open => closed', [
+        animate('0.5s'),
+      ]),
+      transition('closed => open', [
+        animate('0.5s')
+      ]),
+    ]),
+  ],
 })
 export class AboutmeComponent implements OnInit{
   state: boolean = false;
-  first: number = 0;
-  constructor(private homeService:HomeService){}
+  constructor(private homeService: HomeService){}
 
-  ngOnInit(): void {
-    this.homeService.getState.subscribe(state => {
-      this.state = state;
-      if(this.first !== 0){
-        this.hidenTest();
-      }
-      this.first++;
-    });
+  ngOnInit(): void {}
+
+  toggle(){
+    let img = document.querySelector(".down");
+    this.state = this.homeService.toggle(img as HTMLElement, this.state);
   }
-
-  hidenTest(){
-    var element = document.getElementById('panel');
-    if (element!.classList.contains('hidden')) {
-        element!.classList.remove('hidden');
-        setTimeout(function () {
-          element!.classList.remove('visuallyhidden');
-        }, 2);
-    } else {
-        element!.classList.add('visuallyhidden');
-        element!.addEventListener('transitionend', function(e) {
-          element!.classList.add('hidden');
-
-        }, {
-          capture: false,
-          once: true,
-          passive: false
-        });
-      }
-  }
-
 
 }

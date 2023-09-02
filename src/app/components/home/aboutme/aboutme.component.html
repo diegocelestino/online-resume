@@ -1,4 +1,9 @@
-<div class="box visuallyhidden hidden" id="panel">
+<div class="dropdown" >
+  <div class="text-dropdown">About me</div>
+  <img (click)="toggle()" id ="arrow" class="down" src="../assets/img/down.png"/>
+</div>
+
+<div [@openClose]="state ? 'open' : 'closed'">
   <div class="aboutme">
    <div class="items">
      <img class="image" src="../assets/img/perfil.png" />

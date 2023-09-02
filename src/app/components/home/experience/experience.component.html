@@ -1,3 +1,9 @@
+<div class="dropdown" >
+  <div class="text-dropdown">Experience</div>
+  <img (click)="toggle()" class="down" id="experience-dropdown" src="../assets/img/down.png"/>
+</div>
+
+<div [@openClose]="state ? 'open' : 'closed'">
 <div class="experience">
   <div class="items">
     <img class="image" src="../assets/img/jnj.png" />
@@ -63,4 +69,5 @@
 
     <img class="image" src="../assets/img/bar.png" />
   </div>
+</div>
 </div>

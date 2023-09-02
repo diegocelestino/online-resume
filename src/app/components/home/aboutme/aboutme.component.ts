@@ -1,19 +1,20 @@
-import { Component, OnInit} from '@angular/core';
+import { Component} from '@angular/core';
 import {trigger, transition,animate, style, state} from '@angular/animations';
 import {HomeService} from "../home.service";
 @Component({
   selector: 'app-aboutme',
   templateUrl: './aboutme.component.html',
-  styleUrls: ['./aboutme.component.scss'],
+  styleUrls: ['./aboutme.component.scss', '../home.component.scss'],
   animations: [
     trigger('openClose', [
       state('open', style({
         opacity: 1,
-        height: '700px'
+        zIndex: 1,
       })),
       state('closed', style({
+        zIndex: 0,
         height: '0px',
-        opacity: -1,
+        opacity: 0,
       })),
       transition('open => closed', [
         animate('0.5s'),
@@ -24,14 +25,12 @@ import {HomeService} from "../home.service";
     ]),
   ],
 })
-export class AboutmeComponent implements OnInit{
+export class AboutmeComponent{
   state: boolean = false;
   constructor(private homeService: HomeService){}
 
-  ngOnInit(): void {}
-
   toggle(){
-    let img = document.querySelector(".down");
+    let img = document.getElementById("about-me-dropdown");
     this.state = this.homeService.toggle(img as HTMLElement, this.state);
   }
 

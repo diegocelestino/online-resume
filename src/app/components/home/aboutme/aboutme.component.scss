@@ -22,7 +22,7 @@
   gap: 8px;
 }
 
-.aboutme .tittle {
+.aboutme .title {
   color: #FFF;
   font-family: Inria Sans;
   font-size: 32px;
@@ -42,32 +42,4 @@
   line-height: normal;
   width: 635px;
   height: 337px;
-}
-
-.dropdown {
-  display: flex;
-  margin: 40px auto;
-  margin-left: 80px;
-  background: black;
-}
-
-.dropdown .down {
-  top: 13px;
-  left: 44px;
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  transition: transform 0.5s ease-in;
-}
-
-.dropdown .text-dropdown {
-  width: 334px;
-  top: 19px;
-  left: 113px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 48px;
-  letter-spacing: 0;
-  line-height: normal;
 }

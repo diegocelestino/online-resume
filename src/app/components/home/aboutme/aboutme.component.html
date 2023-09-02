@@ -1,14 +1,14 @@
 <div class="dropdown" >
   <div class="text-dropdown">About me</div>
-  <img (click)="toggle()" id ="arrow" class="down" src="../assets/img/down.png"/>
+  <img (click)="toggle()" id="about-me-dropdown" class="down" src="../assets/img/down.png"/>
 </div>
 
-<div [@openClose]="state ? 'open' : 'closed'">
+<div class="background" [@openClose]="state ? 'open' : 'closed'">
   <div class="aboutme">
    <div class="items">
      <img class="image" src="../assets/img/perfil.png" />
       <div class="text_container">
-       <p class="tittle">26 YEARS OLD | São Paulo - SP</p>
+       <p class="title">26 YEARS OLD | São Paulo - SP</p>
        <p class="text">
         I am always doing something for the first time. I am passionate about learning new things and putting
         myself in unexplored situations, it brings me the feeling of constantly evolving. <br /><br />I have very

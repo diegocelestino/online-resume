@@ -12,9 +12,9 @@ export class HomeService {
 
   toggle(img: HTMLElement, state: boolean): boolean{
     if (state){
-      (img).style.transform = 'rotate(0deg)';
+      img.style.transform = 'rotate(0deg)';
     }else {
-      (img).style.transform = 'rotate(180deg)';
+      img.style.transform = 'rotate(180deg)';
     }
     return !state;
   }

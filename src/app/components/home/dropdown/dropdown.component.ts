@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HomeService} from "../home.service";
+import {elementAt} from "rxjs";
 
 
 @Component({
@@ -9,26 +10,26 @@ import {HomeService} from "../home.service";
 })
 export class DropdownComponent implements OnInit{
   @Input() title: string | undefined;
+  @Input() dropdownClass: string | undefined;
+
   state = false;
 
-  message:string="";
   constructor(private homeService: HomeService) {
-    this.homeService.getMessage.subscribe(msg => this.message = msg);
     this.homeService.getState.subscribe(state => this.state = state);
   }
 
-  updateMessage(){
-    this.homeService.setMessage('This is updated msg from test component.');
-  };
+  ngOnInit(): void {
+    var arrow = document.getElementById('arrow');
+    arrow!.classList.add(this.dropdownClass!.toString());
+    console.log(arrow!.classList)
+  }
+
   updateState(){
     this.homeService.setState(!this.state);
   }
 
-  ngOnInit(): void {
-  }
   showSection() {
     this.rotateArrow();
-    this.updateMessage();
     this.updateState();
   };
 
@@ -40,6 +41,4 @@ export class DropdownComponent implements OnInit{
       (img as HTMLElement).style.transform = 'rotate(180deg)';
     }
   }
-
-
 }

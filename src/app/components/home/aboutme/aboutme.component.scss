@@ -3,6 +3,31 @@
   margin: auto;
 }
 
+.hidden {
+  display: none;
+}
+
+.box {
+  transition: all 1s linear;
+}
+
+.visuallyhidden {
+  opacity: 0;
+}
+
+.show{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition-delay: 1s;
+  transition: 3s;
+  display: flex;
+}
+.hide{
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition-delay: 1s;
+  transition: 3s;
+  display: none;
+}
+
 .aboutme .items {
   margin: auto;
   display: flex;

@@ -27,13 +27,11 @@ export class AboutmeComponent implements OnInit{
         element!.classList.remove('hidden');
         setTimeout(function () {
           element!.classList.remove('visuallyhidden');
-        }, 20);
-      console.log(element!.classList);
+        }, 2);
     } else {
         element!.classList.add('visuallyhidden');
         element!.addEventListener('transitionend', function(e) {
           element!.classList.add('hidden');
-          console.log(element!.classList);
 
         }, {
           capture: false,

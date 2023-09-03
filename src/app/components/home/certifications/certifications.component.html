@@ -1,106 +1,37 @@
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/ifsp.png" />
-    <div class="texts">
-      <div class="title">Events Platform Development</div>
-      <div class="link">https://www.linkedin.com/feed/update/urn:li:activity:7102782887225176064/</div>
-    </div>
-  </div>
+<div class="dropdown">
+  <div class="text-dropdown">Certifications</div>
+  <img (click)="toggle()" class="down" id="certification-dropdown" src="../assets/img/down.png"/>
 </div>
 
-
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/alura.png" />
-    <div class="texts">
-      <div class="title">Spring Framework</div>
-      <div class="link">
-        https://cursos.alura.com.br/degree/certificate/fdf3c59e-2f9f-4eb3-9aaa-a1ceee337ffe?lang=pt_BR
+<div [@openClose]="state ? 'open' : 'closed'">
+  <div class="certifications">
+    <div class="items">
+      <div class="content" [@changeContent]="this.contentChange.changeView ? 'in' : 'out'"
+           (@changeContent.start)="this.contentChange.actualContent = this.homeService.onAnimationEvent(
+           this.contentChange)">
+        <img class="image" src="{{ content.at(contentChange.actualContent)?.imgSource }}"/>
+        <div class="texts">
+          <div class="title">{{ content.at(contentChange.actualContent)?.title }}</div>
+          <a class="button-link" target="_blank" href="{{ content.at(contentChange.actualContent)?.subtitle }}">
+            <p class="text-link">See Credentials</p>
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/alura.png" />
-    <div class="texts">
-      <p class="title">Figma: Visual Design of a Mobile Site</p>
-      <div class="link">
-        https://cursos.alura.com.br/certificate/17010ee7-e84b-4582-992a-8a6a1b94591d
+      <div class="outer-indicator">
+        <img (click)="changeControl('left')" src="../assets/img/left.png"/>
+        <div class="inner-indicator" *ngFor="let i of content">
+          <ng-container *ngIf="content[contentChange.actualContent] == i; then bigCircle; else tinyCircle"></ng-container>
+          <ng-template #bigCircle>
+            <img src="../assets/img/big-circle.png"/>
+          </ng-template>
+          <ng-template #tinyCircle>
+            <img src="../assets/img/tiny-circle.png"/>
+          </ng-template>
+        </div>
+        <img (click)="changeControl('right')" src="../assets/img/right.png"/>
       </div>
-    </div>
-  </div>
-</div>
 
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/alura.png" />
-    <div class="texts">
-      <div class="title">Data Modeling</div>
-      <div class="link">
-        https://cursos.alura.com.br/degree/certificate/8ffc2ab6-0ef7-4c5f-b288-97519ebea88e
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/alura.png" />
-    <div class="texts">
-      <div class="title">C# and OOP</div>
-      <div class="link">
-        https://cursos.alura.com.br/degree/certificate/09acab15-900c-4064-870a-e51e005a3131?lang=en
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/alura.png" />
-    <div class="texts">
-      <div class="title">Python</div>
-      <div class="link">
-        https://cursos.alura.com.br/degree/certificate/4a3d662d-1369-42c4-accc-7cf2644439c4
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/linkedin.png" />
-    <div class="texts">
-      <p class="title">Agile User Experience Design and Research</p>
-      <div class="link">
-        https://www.linkedin.com/learning/certificates/ce55a22d65e62c639fb5788aa48edc09b32c280cbfb7485c73de50fc7c380b45?u=26887274
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/linkedin.png" />
-    <div class="texts">
-      <div class="title">Lead Generation Foundations</div>
-      <div class="link">
-        https://www.linkedin.com/learning/certificates/996a9e90ea59cc0a1cd8fae66256520ab9020c067e0960de87921acfd30ea611?u=26887274
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="certifications">
-  <div class="items">
-    <img class="image" src="../assets/img/linkedin.png" />
-    <div class="texts">
-      <p class="title">Customer Experience: Creating Customer Personas</p>
-      <div class="link">
-        https://www.linkedin.com/learning/certificates/297656e5b4ebe1868c1fff298904e30ee4256aa5be6bd27dcc20bea91540bc0f?u=26887274
-      </div>
     </div>
   </div>
 </div>

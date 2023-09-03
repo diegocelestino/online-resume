@@ -1,13 +1,6 @@
 .certifications {
   display: flex;
-  margin: 120px auto;
-}
-
-.certifications .items {
   margin: auto;
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 100px;
 }
 
 .certifications .image {
@@ -37,13 +30,25 @@
   line-height: normal;
 }
 
-.certifications .link {
-  width: 400px;
-  height: 87px;
-  font-family: "Inria Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+.certifications .button-link {
+  border-radius: 16px;
+  background: #361DD1;
+  display: flex;
+  padding: 16px 16px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.certifications .button-link:hover {
+  box-shadow: 2px 2px 10px #414141 ;
+}
+
+.certifications .text-link {
+  margin-top: -8px;
+  margin-bottom: -8px;
+  color: #FFF;
+  font-family: Inria Sans;
+  font-size: 32px;
+  font-weight: 700;
 }

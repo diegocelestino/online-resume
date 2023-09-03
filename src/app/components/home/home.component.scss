@@ -46,6 +46,8 @@
 }
 
 .outer-indicator {
+  z-index: 1;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 43px;

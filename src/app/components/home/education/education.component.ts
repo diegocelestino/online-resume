@@ -35,7 +35,7 @@ export class EducationComponent {
   private addContent() {
     this.content.push(this.ads);
     this.content.push(this.drs);
-
+    this.content.push(this.gv);
   }
 
   ads = new Content(
@@ -45,16 +45,27 @@ export class EducationComponent {
     "want more practical training, geared towards the job market, and has one of the highest" +
     "demands for places in the entire IFSP.",
     "../assets/img/ifsp.png"
-  );
+  )
 
   drs= new Content(
     "Clown Training for Youth",
-    "Doutores da Alegria | 16/01 - 18/12",
+    "Doutores da Alegria | 16/01 - 17/12",
     "The Doctors of Joy Youth Clown Training Program is an initiative that aims to train " +
     "young people to become professional artists trained in the language of clowning. Created " +
     "by the Doctors of Joy organization, the program offers specific training in clowning, " +
     "improvisation and circus techniques, preparing participants for an artistic career with " +
     "an eye to the human side.",
     "../assets/img/doutores.png"
+  )
+
+  gv= new Content(
+    "High School",
+    "ETEC Getúlio Vargas | 11/01 - 13/12",
+    "ETEC Getúlio Vargas is a technical education institution. Offering technical and integrated " +
+    "high school courses, the school aims to provide quality vocational training " +
+    "in areas such as IT, electronics, administration and design. In addition to the academic aspects," +
+    "TEC promotes extracurricular activities to prepare students for the challenges of the job market and contribute" +
+    "to technological and economic development",
+    "../assets/img/gv.png"
   )
 }

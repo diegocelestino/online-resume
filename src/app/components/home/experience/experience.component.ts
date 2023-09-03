@@ -1,49 +1,15 @@
-import {AfterViewChecked, Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import {HomeService} from "../home.service";
-import {animate, sequence, state, style, transition, trigger} from "@angular/animations";
 import {Content} from "../content.model";
+import {Animations} from "../animations";
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss', '../home.component.scss'],
   animations: [
-    trigger('openClose', [
-      state('open', style({
-        opacity: 1,
-        zIndex: 1,
-      })),
-      state('closed', style({
-        zIndex: 0,
-        height: '0px',
-        opacity: 0,
-      })),
-      transition('open => closed', [
-        animate('0.5s'),
-      ]),
-      transition('closed => open', [
-        animate('0.5s')
-      ]),
-    ]),
-    trigger('changeContent', [
-      state('in', style({
-        opacity: 1,
-        zIndex: 1,
-      })),
-      state('out', style({
-        zIndex: 1,
-        opacity: 1,
-      })),
-      transition('in <=> out', [
-        sequence([
-          style({
-            opacity: -1,
-            zIndex: 0,
-          }),
-          animate('0.5s'),
-        ]),
-      ]),
-    ]),
+    Animations.openClose,
+    Animations.changeContent
   ],
 
 })

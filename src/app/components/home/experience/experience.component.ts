@@ -26,43 +26,18 @@ export class ExperienceComponent {
     this.state = this.homeService.toggle(img as HTMLElement, this.state);
   }
 
-  constructor(private homeService: HomeService) {
+  constructor(public homeService: HomeService) {
     this.content.push(this.jnj);
     this.content.push(this.codelab);
     this.content.push(this.saHall);
+    this.content.push(this.bars)
   }
 
-  leftControl() {
+  changeControl(side: string) {
     this.changeView = !this.changeView;
-    this.side = "left";
+    this.side = side;
   }
 
-  rightControl() {
-    this.changeView = !this.changeView;
-    this.side = "right";
-  }
-
-  onAnimationEvent(event: any) {
-    if (this.side == "right") {
-      setTimeout(() => {
-        if (this.actualContent == this.content.length - 1) {
-          this.actualContent = 0;
-        } else {
-          this.actualContent += 1;
-        }
-      }, 200)
-    }
-
-    if (this.side == "left") {
-      setTimeout(() => {
-        if (this.actualContent == 0) {
-          this.actualContent = this.content.length - 1;
-        } else {
-          this.actualContent -= 1;
-        }
-      }, 200)
-    }
-  }
 
   jnj = new Content(
     "Johnson & Johnson Medtech",
@@ -97,6 +72,15 @@ export class ExperienceComponent {
     "figures and musicality, so that they can communicate more effectively." +
     "communicate more effectively;",
     "../assets/img/creche.png"
+  );
+
+  bars = new Content(
+    "Bars and Events",
+    "Freelancer |  17/02 - nowadays",
+    "Leading and supervising a team of attendants and re-stockers; setting up and dismantling" +
+    "operations for small and large-scale events; replenishing materials on demand; " +
+    "personalized customer service with classic cocktail menus; keeping the work area clean and organized;",
+    "../assets/img/bar.png"
   );
 
 

@@ -17,3 +17,17 @@ export class Content {
   }
 }
 
+export class ContentChange {
+  state: boolean;
+  side: string;
+
+  constructor(
+    state: boolean,
+    side: string,
+  ) {
+    this.state = state;
+    this.side = side;
+  }
+
+}
+

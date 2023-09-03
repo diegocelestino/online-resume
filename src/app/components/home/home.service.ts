@@ -5,7 +5,7 @@ import {BehaviorSubject} from "rxjs";
   providedIn: 'root'
 })
 export class HomeService {
-  private state = new BehaviorSubject(true);
+  state = new BehaviorSubject(true);
 
   getState = this.state.asObservable();
   constructor() { }
@@ -18,4 +18,23 @@ export class HomeService {
     }
     return !state;
   }
+
+  onAnimationEvent(side: string, actualContent: number, contentLength: number): number {
+    if (side == "right") {
+        if (actualContent == contentLength - 1) {
+          return 0;
+        } else {
+          return ++actualContent;
+        }
+    }
+    if (side == "left") {
+        if (actualContent == 0) {
+          return contentLength - 1;
+        } else {
+          return --actualContent;
+        }
+    }
+    return 0;
+  }
+
 }

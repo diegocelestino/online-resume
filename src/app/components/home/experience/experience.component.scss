@@ -1,21 +1,6 @@
 .experience {
-  transition-duration: 1s;
   display: flex;
   margin: auto;
-}
-
-.experience .items {
-  margin: auto;
-  display: inline;
-  align-items: flex-end;
-  gap: 100px;
-}
-
-.experience .content {
-  margin: auto;
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 100px;
 }
 
 .experience .image {
@@ -57,19 +42,4 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
-}
-
-.experience .outer-indicator {
-  display: flex;
-  align-items: center;
-  gap: 43px;
-  justify-content: center;
-  margin-top: 28px;
-}
-
-.experience .inner-indicator{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
 }

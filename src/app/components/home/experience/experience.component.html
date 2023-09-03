@@ -6,7 +6,7 @@
 <div [@openClose]="state ? 'open' : 'closed'">
   <div class="experience">
     <div class="items">
-      <div class="content" [@changeContent]="changeView ? 'in' : 'out'"
+      <div class="content" [@changeContent]="this.contentChange.changeView ? 'in' : 'out'"
            (@changeContent.start)="this.contentChange.actualContent = this.homeService.onAnimationEvent(
            this.contentChange)">
         <img class="image" src="{{ content.at(contentChange.actualContent)?.imgSource }}"/>

@@ -30,3 +30,33 @@
   letter-spacing: 0;
   line-height: normal;
 }
+
+.items {
+  margin: auto;
+  display: inline;
+  align-items: flex-end;
+  gap: 100px;
+}
+
+.content {
+  margin: auto;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 100px;
+}
+
+.outer-indicator {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.inner-indicator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+

@@ -16,15 +16,11 @@ import {Animations} from "../animations";
 export class ExperienceComponent {
   state: boolean = false;
   content: Content[] = [];
-  changeView: boolean = true;
   contentChange: ContentChange;
 
   constructor(public homeService: HomeService) {
-    this.content.push(this.jnj);
-    this.content.push(this.codelab);
-    this.content.push(this.saHall);
-    this.content.push(this.bars);
-    this.contentChange = new ContentChange('', 0, this.content.length);
+    this.addContent();
+    this.contentChange = new ContentChange('', true, 0, this.content.length);
   }
 
   toggle() {
@@ -33,8 +29,15 @@ export class ExperienceComponent {
   }
 
   changeControl(side: string) {
-    this.changeView = !this.changeView;
+    this.contentChange.changeView = !this.contentChange.changeView;
     this.contentChange.side = side;
+  }
+
+  addContent(){
+    this.content.push(this.jnj);
+    this.content.push(this.codelab);
+    this.content.push(this.saHall);
+    this.content.push(this.bars);
   }
 
   jnj = new Content(

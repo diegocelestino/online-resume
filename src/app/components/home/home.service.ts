@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {ContentChange} from "./content.model";
 
 @Injectable({
   providedIn: 'root'
@@ -19,20 +20,20 @@ export class HomeService {
     return !state;
   }
 
-  onAnimationEvent(side: string, actualContent: number, contentLength: number): number {
-    if (side == "right") {
-        if (actualContent == contentLength - 1) {
-          return 0;
-        } else {
-          return ++actualContent;
-        }
+  onAnimationEvent(contentChange: ContentChange): number {
+    if (contentChange.side == "right") {
+      if (contentChange.actualContent == contentChange.contentLength - 1) {
+        return 0;
+      } else {
+        return ++contentChange.actualContent;
+      }
     }
-    if (side == "left") {
-        if (actualContent == 0) {
-          return contentLength - 1;
-        } else {
-          return --actualContent;
-        }
+    if (contentChange.side == "left") {
+      if (contentChange.actualContent == 0) {
+        return contentChange.contentLength - 1;
+      } else {
+        return --contentChange.actualContent;
+      }
     }
     return 0;
   }

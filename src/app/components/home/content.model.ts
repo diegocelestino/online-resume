@@ -18,15 +18,18 @@ export class Content {
 }
 
 export class ContentChange {
-  state: boolean;
   side: string;
+  actualContent: number;
+  contentLength: number;
 
   constructor(
-    state: boolean,
     side: string,
+    actualContent: number,
+    contentLength: number
   ) {
-    this.state = state;
     this.side = side;
+    this.actualContent = actualContent;
+    this.contentLength = contentLength
   }
 
 }

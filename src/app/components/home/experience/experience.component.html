@@ -7,24 +7,20 @@
   <div class="experience">
     <div class="items">
       <div class="content" [@changeContent]="changeView ? 'in' : 'out'"
-           (@changeContent.start)="this.actualContent = this.homeService.onAnimationEvent(
-           this.side,
-           this.actualContent,
-           this.content.length)">
-        <img class="image" src="{{ content.at(actualContent)?.imgSource }}"/>
+           (@changeContent.start)="this.contentChange.actualContent = this.homeService.onAnimationEvent(
+           this.contentChange)">
+        <img class="image" src="{{ content.at(contentChange.actualContent)?.imgSource }}"/>
         <div class="texts">
-          <p class="title">{{ content.at(actualContent)?.title }}</p>
-          <div class="subtitle">{{ content.at(actualContent)?.subtitle }}</div>
-          <p class="text">
-            {{ content.at(actualContent)?.text }}
-          </p>
+          <p class="title">{{ content.at(contentChange.actualContent)?.title }}</p>
+          <div class="subtitle">{{ content.at(contentChange.actualContent)?.subtitle }}</div>
+          <p class="text">{{ content.at(contentChange.actualContent)?.text }}</p>
         </div>
       </div>
 
       <div class="outer-indicator">
         <img (click)="changeControl('left')" src="../assets/img/left.png"/>
         <div class="inner-indicator" *ngFor="let i of content">
-          <ng-container *ngIf="content[actualContent] == i; then bigCircle; else tinyCircle"></ng-container>
+          <ng-container *ngIf="content[contentChange.actualContent] == i; then bigCircle; else tinyCircle"></ng-container>
           <ng-template #bigCircle>
             <img src="../assets/img/big-circle.png"/>
           </ng-template>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {HomeService} from "../home.service";
-import {Content} from "../content.model";
+import {Content, ContentChange} from "../content.model";
 import {Animations} from "../animations";
 
 @Component({
@@ -16,28 +16,26 @@ import {Animations} from "../animations";
 export class ExperienceComponent {
   state: boolean = false;
   content: Content[] = [];
-  actualContent: number = 0;
   changeView: boolean = true;
-  side: string = "";
+  contentChange: ContentChange;
 
+  constructor(public homeService: HomeService) {
+    this.content.push(this.jnj);
+    this.content.push(this.codelab);
+    this.content.push(this.saHall);
+    this.content.push(this.bars);
+    this.contentChange = new ContentChange('', 0, this.content.length);
+  }
 
   toggle() {
     let img = document.getElementById("experience-dropdown");
     this.state = this.homeService.toggle(img as HTMLElement, this.state);
   }
 
-  constructor(public homeService: HomeService) {
-    this.content.push(this.jnj);
-    this.content.push(this.codelab);
-    this.content.push(this.saHall);
-    this.content.push(this.bars)
-  }
-
   changeControl(side: string) {
     this.changeView = !this.changeView;
-    this.side = side;
+    this.contentChange.side = side;
   }
-
 
   jnj = new Content(
     "Johnson & Johnson Medtech",

@@ -1,12 +1,12 @@
 .contact {
   display: flex;
-  margin: 120px auto;
+  margin: auto;
 }
 
 .contact .items {
   margin: auto;
-  display: inline-flex;
-  align-items: flex-end;
+  display: flex;
+  align-items: center;
   gap: 100px;
 }
 
@@ -17,16 +17,13 @@
 }
 
 .contact .texts {
-  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
 }
 
 .contact .title {
-  width: 673px;
+  width: 100%;
   height: 45px;
   margin-top: -1px;
   font-family: "Inria Sans-Bold", Helvetica;

@@ -1,9 +1,16 @@
-<div class="contact">
-  <div class="items">
-    <img class="image" src="../assets/img/gmail.png" />
-    <div class="texts">
-      <div class="title">E-mail</div>
-      <div class="email">diegocdsantos@gmail.com</div>
+<div class="dropdown">
+  <div class="text-dropdown">Contact</div>
+  <img (click)="toggle()" class="down" id="contact-dropdown" src="../assets/img/down.png"/>
+</div>
+
+<div class="background" [@openClose]="state ? 'open' : 'closed'">
+  <div class="contact">
+    <div class="items">
+      <img class="image" src="../assets/img/gmail.png"/>
+      <div class="texts">
+        <div class="title">E-mail</div>
+        <div class="email">diegocdsantos@gmail.com</div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,73 +1,38 @@
-<div class="dropdown" >
+<div class="dropdown">
   <div class="text-dropdown">Experience</div>
   <img (click)="toggle()" class="down" id="experience-dropdown" src="../assets/img/down.png"/>
 </div>
 
 <div [@openClose]="state ? 'open' : 'closed'">
-<div class="experience">
-  <div class="items">
-    <img class="image" src="../assets/img/jnj.png" />
-
-      <div class="texts">
-        <p class="tittle">Johnson &amp; Johnson Medtech 23/02 - nowadays</p>
-        <div class="subtittle">Experience Design Intern</div>
-        <p class="text">
-          Practice of design thinking methodologies to build new solutions focused on customer needs; support in
-          building a toolbox of user-centered methodologies; development of guides and repositories for creating
-          visual interfaces; creating and facilitating communities of practice; support for product squads applying
-          UX and UI methods; development of actions to generate awareness of human-centered design.
-        </p>
+  <div class="experience">
+    <div class="items">
+      <div class="content" [@changeContent]="changeView ? 'in' : 'out'"
+           (@changeContent.start)="onAnimationEvent($event)">
+        <img class="image" src="{{content.at(actualContent)?.imgSource}}"/>
+        <div class="texts">
+          <p class="title">{{content.at(actualContent)?.title}}</p>
+          <div class="subtitle">{{content.at(actualContent)?.subtitle}}</div>
+          <p class="text">
+            {{content.at(actualContent)?.text}}
+          </p>
+        </div>
       </div>
+
+      <div class="outer-indicator">
+        <img (click)="leftControl()" src="../assets/img/left.png"/>
+        <div class="inner-indicator" *ngFor="let i of content">
+          <ng-container *ngIf="content[actualContent] == i; then bigCircle; else tinyCircle"></ng-container>
+          <ng-template #bigCircle>
+            <img src="../assets/img/big-circle.png"/>
+          </ng-template>
+          <ng-template #tinyCircle>
+            <img src="../assets/img/tiny-circle.png"/>
+          </ng-template>
+        </div>
+        <img (click)="rightControl()" src="../assets/img/right.png"/>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="experience">
-  <div class="items">
-      <div class="texts">
-        <p class="tittle">IFSP Codelab 22/05 - 22/12</p>
-        <div class="subtittle">Software Developer Intern</div>
-        <p class="text">
-          Analysis and development of legacy project, survey and preparation of user stories and acceptance
-          criteria; development of low and high fidelity prototypes, development of SPA&#39;s and REST API&#39;s
-          with Spring and Angular; researching and developing solutions to implementation problems; group work, pair
-          programming and sharing solutions; code versioning with Git/Github; presentations to the general public of
-          the results obtained.
-        </p>
-      </div>
-    <img class="image" src="../assets/img/codelab.png" />
-  </div>
-</div>
-
-<div class="experience">
-  <div class="items">
-    <img class="image" src="../assets/img/creche.png" />
-      <div class="texts">
-        <p class="tittle">Santo André City Hall 19/06 - 22/12</p>
-        <p class="subtittle">Public Employee - Child Development Officer</p>
-        <p class="text">
-          Receive and refer children to their parents, by means of in order to help them reduce their anxieties
-          and fears; assisting in the acquisition and encouragement of walking and motor skills, by
-          respecting the stages of development; encouraging them, with the teacher&#39;s supervision, to advance to
-          the next stage; assisting the teacher in expanding the speech repertoire by naming objects, figures and
-          musicality, so that they can communicate more effectively;
-        </p>
-      </div>
-  </div>
-</div>
-
-<div class="experience">
-  <div class="items">
-      <div class="texts">
-        <p class="tittle">Bars and Events 17/02 - nowadays</p>
-        <div class="subtittle">Freelancer</div>
-        <p class="text">
-          Leading and supervising a team of attendants and re-stockers; setting up and dismantling operations for
-          small and large-scale events; replenishing materials on demand; personalized customer service with classic
-          cocktail menus; keeping the work area clean and organized;
-        </p>
-      </div>
-
-    <img class="image" src="../assets/img/bar.png" />
-  </div>
-</div>
-</div>

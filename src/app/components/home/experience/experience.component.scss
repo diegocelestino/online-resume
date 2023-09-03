@@ -1,9 +1,17 @@
 .experience {
+  transition-duration: 1s;
   display: flex;
-  margin: 120px auto;
+  margin: auto;
 }
 
 .experience .items {
+  margin: auto;
+  display: inline;
+  align-items: flex-end;
+  gap: 100px;
+}
+
+.experience .content {
   margin: auto;
   display: inline-flex;
   align-items: flex-end;
@@ -22,18 +30,19 @@
   align-items: flex-start;
 }
 
-.experience .tittle {
+.experience .title {
+  transition-duration: 1s;
   font-family: "Inria Sans-Regular", Helvetica;
   color: #ffffff;
-  font-size: 32px;
+  font-size: 36px;
   letter-spacing: 0;
   margin: 0px;
 }
 
-.experience .subtittle {
+.experience .subtitle {
   font-family: "Inria Sans-Regular", Helvetica;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 0;
   margin: 0px;
 
@@ -50,3 +59,17 @@
   line-height: normal;
 }
 
+.experience .outer-indicator {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.experience .inner-indicator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}

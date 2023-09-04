@@ -4,6 +4,8 @@
 }
 
 .contact .items {
+  position: relative;
+  z-index: 1;
   margin: auto;
   display: flex;
   align-items: center;

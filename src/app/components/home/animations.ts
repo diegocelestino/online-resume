@@ -7,7 +7,7 @@ export const Animations = {
       zIndex: 1,
     })),
     state('closed', style({
-      zIndex: 0,
+      zIndex: -1,
       height: '0px',
       opacity: 0,
     })),

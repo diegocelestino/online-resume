@@ -51,8 +51,9 @@
 }
 
 .skills .bar_1 {
+  transition-duration: 2s;
   position: absolute;
-  width: 97px;
+  width: 0px;
   height: 29px;
   top: 0;
   left: 0;
@@ -61,7 +62,8 @@
 }
 
 .skills .bar_2 {
-  width: 134px;
+  transition-duration: 2s;
+  width: 0px;
   position: absolute;
   height: 29px;
   top: 0;
@@ -71,7 +73,8 @@
 }
 
 .skills .bar_3 {
-  width: 59px;
+  transition-duration: 2s;
+  width: 0px;
   position: absolute;
   height: 29px;
   top: 0;
@@ -81,7 +84,8 @@
 }
 
 .skills .bar_4 {
-  width: 48px;
+  transition-duration: 2s;
+  width: 0px;
   position: absolute;
   height: 29px;
   top: 0;

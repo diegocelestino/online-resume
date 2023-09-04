@@ -19,7 +19,7 @@
       </div>
 
       <div class="outer-indicator">
-        <img (click)="changeControl('left')" src="../assets/img/left.png"/>
+        <img class="arrow" (click)="changeControl('left')" src="../assets/img/left.png"/>
         <div class="inner-indicator" *ngFor="let i of content">
           <ng-container *ngIf="content[contentChange.actualContent] == i; then bigCircle; else tinyCircle"></ng-container>
           <ng-template #bigCircle>
@@ -29,7 +29,7 @@
             <img src="../assets/img/tiny-circle.png"/>
           </ng-template>
         </div>
-        <img (click)="changeControl('right')" src="../assets/img/right.png"/>
+        <img class="arrow" (click)="changeControl('right')" src="../assets/img/right.png"/>
       </div>
 
     </div>

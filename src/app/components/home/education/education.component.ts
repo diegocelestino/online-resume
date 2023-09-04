@@ -44,7 +44,7 @@ export class EducationComponent {
     "The Systems Analysis and Development Technologist course is aimed at people who " +
     "want more practical training, geared towards the job market, and has one of the highest" +
     "demands for places in the entire IFSP.",
-    "../assets/img/ifsp.png"
+    "assets/ifsp.png"
   )
 
   drs= new Content(
@@ -55,7 +55,7 @@ export class EducationComponent {
     "by the Doctors of Joy organization, the program offers specific training in clowning, " +
     "improvisation and circus techniques, preparing participants for an artistic career with " +
     "an eye to the human side.",
-    "../assets/img/doutores.png"
+    "assets/doutores.png"
   )
 
   gv= new Content(
@@ -66,6 +66,6 @@ export class EducationComponent {
     "in areas such as IT, electronics, administration and design. In addition to the academic aspects," +
     "TEC promotes extracurricular activities to prepare students for the challenges of the job market and contribute" +
     "to technological and economic development",
-    "../assets/img/gv.png"
+    "assets/gv.png"
   )
 }

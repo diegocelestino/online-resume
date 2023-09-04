@@ -47,7 +47,7 @@ export class ExperienceComponent {
     "building a toolbox of user-centered methodologies; development of guides and repositories for creating" +
     "visual interfaces; creating and facilitating communities of practice; support for product squads applying" +
     "UX and UI methods; development of actions to generate awareness of human-centered design.",
-    "../assets/img/jnj.png"
+    "assets/jnj.png"
   );
 
   codelab = new Content(
@@ -58,7 +58,7 @@ export class ExperienceComponent {
     "and REST API's with Spring and Angular; researching and developing solutions to implementation " +
     "problems; group work, pair programming and sharing solutions; code versioning with Git/Github; " +
     "presentations to the general public of the results obtained.",
-    "../assets/img/codelab.png"
+    "assets/codelab.png"
   );
 
   saHall = new Content(
@@ -72,7 +72,7 @@ export class ExperienceComponent {
     "stage; assisting the teacher in expanding the speech repertoire by naming objects, " +
     "figures and musicality, so that they can communicate more effectively." +
     "communicate more effectively;",
-    "../assets/img/creche.png"
+    "assets/creche.png"
   );
 
   bars = new Content(
@@ -81,8 +81,6 @@ export class ExperienceComponent {
     "Leading and supervising a team of attendants and re-stockers; setting up and dismantling" +
     "operations for small and large-scale events; replenishing materials on demand; " +
     "personalized customer service with classic cocktail menus; keeping the work area clean and organized;",
-    "../assets/img/bar.png"
+    "assets/bar.png"
   );
-
-
 }
